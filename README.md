@@ -31,6 +31,9 @@ used **synthetic controller events**. They verify software flow, not human punch
 accuracy, iPhone performance, or physical Fire TV hardware. The edited video
 is kept outside Git to avoid raw media in source control.
 
+Watch the [90-second public emulator demo](https://youtu.be/Pu2sLuW0jzA).
+It labels the simulated controller throughout; its score is not a human result.
+
 The owner reports that they played the prototype and invited friends to play.
 They described those informal sessions as working well and impressive. This is
 owner-reported feedback, without a recorded participant count, device setup,

@@ -26,7 +26,7 @@
     "bench:latency": "node scripts/run_lab_command.mjs latency",
     "eval:motion": "node scripts/run_lab_command.mjs motion",
     "eval:voice": "node scripts/run_lab_command.mjs voice",
-    "test:lab": "python -m pytest scripts/test_eval_motion.py scripts/test_align_recording.py scripts/test_eval_voice.py scripts/test_camera_fixture.py -q -p no:cacheprovider --basetemp=.cache/pytest-lab",
+    "test:lab": "python scripts/test_lab.py",
     "build:tv-web": "node scripts/build_tv_web.mjs",
     "test:tv-web": "node scripts/test_tv_web.mjs",
     "setup:voice": "python scripts/setup_voice.py",

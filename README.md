@@ -33,6 +33,8 @@ is kept outside Git to avoid raw media in source control.
 
 Watch the [90-second public emulator demo](https://youtu.be/Pu2sLuW0jzA).
 It labels the simulated controller throughout; its score is not a human result.
+See the [submitted Devpost project](https://devpost.com/software/jabtempo-tv)
+for the project story and gallery.
 
 The owner reports that they played the prototype and invited friends to play.
 They described those informal sessions as working well and impressive. This is

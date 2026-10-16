@@ -1,0 +1,450 @@
+{
+  "serverInfo": {
+    "name": "Amazon Devices Builder Tools MCP",
+    "version": "1.0.13"
+  },
+  "protocolVersion": "2025-03-26",
+  "tools": [
+    {
+      "name": "read_document",
+      "description": "Read documentation for Amazon Devices App development. Use this tool to fetch content from both local curated context (.md) as well as technical document URLs from https://developer.amazon.com for app development on Amazon's VegaOS and FireOS platforms. IMPORTANT: When the user asks to perform a task such as implement, set up, configure, test, build, deploy, or submit, you MUST first call list_documents with WORKFLOW document type to check for executable step-by-step workflow documents before reading any KB documents. Workflows provide the correct sequence of steps, prerequisites, and error handling for action requests.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "document_uri": {
+            "type": "string",
+            "description": "URI of the document to read. Accepts a local document name (e.g. vega_cli_commands_reference.md) or a developer.amazon.com URL (e.g. https://developer.amazon.com/docs/react-native-vega/0.72/performance.html)"
+          }
+        },
+        "required": [
+          "document_uri"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "list_documents",
+      "description": "List name and short description of all available documents related to App development for Amazon Devices. You can retrieve file content by executing read_document tool with the name of the document. Optionally filter by documentType (KB, PROMPT, STEERING, WORKFLOW, or SKILL). SKILL documents describe agent capabilities and are loaded at init time \u2014 they are excluded from search_documentation results. IMPORTANT: When the user asks to perform a task such as implement, set up, configure, test, build, deploy, or submit, you MUST first call this tool with documentType=\"WORKFLOW\" to check for executable step-by-step workflow documents before reading any KB documents. Workflows provide the correct sequence of steps, prerequisites, and error handling for action requests.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "documentType": {
+            "type": "string",
+            "enum": [
+              "KB",
+              "PROMPT",
+              "STEERING",
+              "WORKFLOW",
+              "SKILL"
+            ],
+            "description": "Optional filter to list documents of a specific type. Valid values: KB, PROMPT, STEERING, WORKFLOW, SKILL."
+          },
+          "target_platform": {
+            "type": "object",
+            "properties": {
+              "device_os": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Amazon Device OS platform(s) to filter by (e.g., [\"vega_os\"] or [\"fire_os\"] or [\"vega_os\", \"fire_os\"])"
+              }
+            },
+            "required": [
+              "device_os"
+            ],
+            "additionalProperties": false,
+            "description": "Target platform filter with device_os array"
+          }
+        },
+        "required": [
+          "target_platform"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "search_documentation",
+      "description": "Search documentation for Amazon Devices App development using full-text search.\n    Returns document URIs and relevant snippets from both local curated content and technical documents from https://developer.amazon.com for app development on Amazon's VegaOS and FireOS platforms.\n    Use read_document with the returned URI to get full content.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search text string to find relevant documents"
+          },
+          "target_platform": {
+            "type": "object",
+            "properties": {
+              "device_os": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Amazon Device OS platform(s) to filter by (e.g., [\"vega_os\"] or [\"fire_os\"] or [\"vega_os\", \"fire_os\"])"
+              }
+            },
+            "required": [
+              "device_os"
+            ],
+            "additionalProperties": false,
+            "description": "Target platform filter with device_os array"
+          }
+        },
+        "required": [
+          "query",
+          "target_platform"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "read_asset",
+      "description": "Read assets referenced in the Amazon Devices documentation.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "asset_id": {
+            "type": "string",
+            "description": "ID of the asset to read"
+          }
+        },
+        "required": [
+          "asset_id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "report_workflow_status",
+      "description": "Report the completion status of an ADBT workflow. Call this tool when a workflow ends (success, failure, or user exit) to track completion telemetry.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workflow_name": {
+            "type": "string",
+            "description": "Workflow document filename without the .md extension (e.g., \"react_native_for_vega_turn_based_rn_upgrade_workflow\"). Must match the document_uri used with read_document for telemetry correlation."
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "success",
+              "failed",
+              "abandoned"
+            ],
+            "description": "Completion status of the workflow"
+          },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": "Additional workflow-specific key-value pairs (e.g., from_version, to_version, completed_steps, total_steps). When status is \"failed\", ALWAYS include these two standardized keys, if possible to ascertain, so we can understand what went wrong: \"failure_reason\" \u2014 a short, lower_snake_case category of the failure suitable for aggregation (e.g., \"build_failed\", \"device_not_connected\", \"playback_broken\", \"dependency_install_failed\"); and \"failure_details\" \u2014 a brief free-form description of the actual error or context the user saw (e.g., the error message, the failing command, or why verification did not pass). These keys are optional because the failure cause cannot always be determined, but include them whenever it can. When status is \"abandoned\", optionally include \"failure_reason\" to record why the user exited. Use these same key names across all workflows so failures are queryable consistently."
+          }
+        },
+        "required": [
+          "workflow_name",
+          "status"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "set_project_context",
+      "description": "Sets project context from .adbt-config.json. Called once per session by the agent after reading the config file during platform detection.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "config": {
+            "type": "object",
+            "properties": {
+              "platform": {
+                "type": "object",
+                "properties": {
+                  "default": {
+                    "type": "string"
+                  },
+                  "paths": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "additionalProperties": false
+              },
+              "project": {
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false,
+            "description": "Contents of .adbt-config.json from the project root"
+          }
+        },
+        "required": [
+          "config"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "analyze_perfetto_traces",
+      "description": "Analyze Vega platform traces using Perfetto trace processor to extract KPI metrics and related performance data",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "traceFilePath": {
+            "type": "string",
+            "description": "Path to the trace file to analyze (required). Usually found in Vega performance data output directories with names like \"iter_*_vs_trace\""
+          },
+          "appProcessName": {
+            "type": "string",
+            "description": "App name to resolve process IDs via applicationLaunchPID slices (e.g. com.amazondeveloper.keplervideoapp)"
+          },
+          "queryType": {
+            "type": "string",
+            "enum": [
+              "kpi_analysis",
+              "custom_query"
+            ],
+            "description": "Type of query to execute (default: kpi_analysis)",
+            "default": "kpi_analysis"
+          },
+          "kpiType": {
+            "type": "string",
+            "enum": [
+              "ttff",
+              "ttfd",
+              "ui_fluidity",
+              "key_input_latency",
+              "all"
+            ],
+            "description": "Specific KPI type to analyze (default: all)",
+            "default": "all"
+          },
+          "customQuery": {
+            "type": "string",
+            "description": "Custom PerfettoSQL query to execute (overrides queryType and kpiType if provided)"
+          },
+          "processNames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Additional process names to filter by (optional)"
+          }
+        },
+        "required": [
+          "traceFilePath",
+          "appProcessName"
+        ]
+      }
+    },
+    {
+      "name": "get_app_hot_functions",
+      "description": "Reads and analyzes CPU trace files to identify hot functions (CPU-intensive operations) contributing to performance bottlenecks.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "traceDataFilePath": {
+            "type": "string",
+            "description": "Path to the trace data file from the Activity Monitor, used to identify hot functions in the target app (required). Usually found in Vega performance data output directories with names like \"iter_<iteration>_trace<epoch>-converted.json\" (e.g., iter_2_trace1766067380670018106-converted.json)"
+          },
+          "useSelfTime": {
+            "type": "boolean",
+            "description": "Flag to indicate whether to use self CPU time or total CPU time for sorting (default: false)"
+          },
+          "includeLibraryFunctions": {
+            "type": "boolean",
+            "description": "Flag to indicate whether to include library functions (default: false)"
+          },
+          "limit": {
+            "type": "number",
+            "description": "Maximum number of hot functions to return (default: 10)"
+          },
+          "startTimestampNs": {
+            "type": "number",
+            "description": "Start timestamp in nanoseconds for analysis window (absolute timestamp from perfetto trace, e.g., 5818800000000)"
+          },
+          "endTimestampNs": {
+            "type": "number",
+            "description": "End timestamp in nanoseconds for analysis window (absolute timestamp from perfetto trace, e.g., 5819100000000)"
+          }
+        },
+        "required": [
+          "traceDataFilePath"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "hotFunctions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "rank": {
+                  "type": "number",
+                  "description": "Rank of the function based on CPU time consumption"
+                },
+                "function_name": {
+                  "type": "string",
+                  "description": "Name of the function"
+                },
+                "duration": {
+                  "type": "number",
+                  "description": "Duration in milliseconds"
+                },
+                "file_path": {
+                  "type": "string",
+                  "description": "File path where the function is located"
+                },
+                "line_number": {
+                  "type": "number",
+                  "description": "Line number in the file"
+                },
+                "column_number": {
+                  "type": "number",
+                  "description": "Column number in the file"
+                },
+                "percent_of_total": {
+                  "type": "number",
+                  "description": "Percentage of total CPU time consumed"
+                },
+                "isAppFunction": {
+                  "type": "boolean",
+                  "description": "Whether this is an application function (true) or library function (false)"
+                }
+              },
+              "required": [
+                "rank",
+                "function_name",
+                "duration",
+                "file_path",
+                "line_number",
+                "column_number",
+                "percent_of_total",
+                "isAppFunction"
+              ],
+              "additionalProperties": false
+            },
+            "description": "Array of hot functions sorted by CPU time consumption"
+          },
+          "analysisMetadata": {
+            "type": "object",
+            "properties": {
+              "traceFilePath": {
+                "type": "string",
+                "description": "Path to the analyzed trace file"
+              },
+              "totalFunctions": {
+                "type": "number",
+                "description": "Total number of functions analyzed"
+              },
+              "usedSelfTime": {
+                "type": "boolean",
+                "description": "Whether self CPU time was used for sorting"
+              },
+              "includedLibraryFunctions": {
+                "type": "boolean",
+                "description": "Whether library functions were included"
+              },
+              "timeWindow": {
+                "type": "object",
+                "properties": {
+                  "startTs": {
+                    "type": "number",
+                    "description": "Analysis start timestamp in milliseconds"
+                  },
+                  "endTs": {
+                    "type": "number",
+                    "description": "Analysis end timestamp in milliseconds"
+                  }
+                },
+                "required": [
+                  "startTs",
+                  "endTs"
+                ],
+                "additionalProperties": false,
+                "description": "Time window of the analysis"
+              },
+              "errorMessage": {
+                "type": "string",
+                "description": "Error message if analysis failed"
+              }
+            },
+            "required": [
+              "traceFilePath",
+              "totalFunctions",
+              "usedSelfTime",
+              "includedLibraryFunctions",
+              "timeWindow"
+            ],
+            "additionalProperties": false,
+            "description": "Metadata about the analysis performed"
+          }
+        },
+        "required": [
+          "hotFunctions",
+          "analysisMetadata"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "symbolicate_acr",
+      "description": "Symbolicate ACR (Amazon Crash Report) files and create a report. Supports two decode modes: \"gdb\" for native crashes (requires either `debugFsPath` or `deviceId`), and \"js\" for JavaScript stack traces. The ACR file must exist at the specified path.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "acrFilePath": {
+            "type": "string",
+            "description": "Path to the ACR file to symbolicate. Must be an absolute path (~ is expanded)."
+          },
+          "decodeMode": {
+            "type": "string",
+            "enum": [
+              "gdb",
+              "js"
+            ],
+            "description": "Allowed values: \"gdb\" or \"js\".\n\"gdb\": convert minidump to mini-ELF-core and load to GDB with DWARF symbols. Requires either `debugFsPath` or `deviceId`.\n\"js\": symbolicate the JS stack trace. No additional parameters required."
+          },
+          "deviceId": {
+            "type": "string",
+            "description": "Target device serial number to fetch Debug FS. Incompatible with `debugFsPath`. Required for GDB mode if `debugFsPath` is not provided."
+          },
+          "debugFsPath": {
+            "type": "string",
+            "description": "Path to Debug Root FS. Incompatible with `deviceId`. Required for GDB mode if `deviceId` is not provided. Tilde (~) paths are expanded."
+          },
+          "additionalSearchPath": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Additional search paths or files for debug symbols/source maps.\nThey must be absolute paths. \nThis is useful if you have additional debug symbols/source maps that are not in the debug Root FS."
+          }
+        },
+        "required": [
+          "acrFilePath",
+          "decodeMode"
+        ],
+        "additionalProperties": false
+      },
+      "required": [
+        "acrFilePath",
+        "decodeMode"
+      ]
+    }
+  ],
+  "scope": "Local stdio handshake; does not verify this chat's MCP connection"
+}

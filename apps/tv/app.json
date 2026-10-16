@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "JabTempo TV",
+    "slug": "jabtempo-tv",
+    "scheme": "jabtempo",
+    "platforms": [
+      "android",
+      "web"
+    ],
+    "android": {
+      "package": "org.jabtempo.tv",
+      "permissions": [
+        "INTERNET"
+      ],
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.VIBRATE"
+      ]
+    },
+    "newArchEnabled": false,
+    "plugins": [
+      "./plugins/withKotlinJvmTarget.cjs",
+      [
+        "@react-native-tvos/config-tv",
+        {
+          "isTV": true,
+          "androidTVRequired": true,
+          "removeFlipperOnAndroid": false
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "kotlinVersion": "2.0.21",
+            "compileSdkVersion": 36,
+            "targetSdkVersion": 34,
+            "minSdkVersion": 24,
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      [
+        "react-native-video",
+        {
+          "enableNotificationControls": false,
+          "enableBackgroundAudio": false
+        }
+      ],
+      "expo-font"
+    ],
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    }
+  }
+}

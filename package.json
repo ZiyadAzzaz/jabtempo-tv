@@ -1,0 +1,50 @@
+{
+  "name": "jabtempo-tv",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20 <21"
+  },
+  "workspaces": [
+    "apps/dev-web",
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "node scripts/test.mjs",
+    "test:coverage": "node scripts/test.mjs --coverage",
+    "typecheck": "tsc -p tsconfig.json",
+    "build:web": "node scripts/build_web.mjs",
+    "dev": "node scripts/dev_server.mjs",
+    "dev:iphone": "node scripts/iphone_dev_server.mjs",
+    "setup:assets": "python scripts/setup_assets.py",
+    "preflight": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/preflight.ps1",
+    "test:integration": "node --test packages/tv-pose-bridge/test/relay.test.js",
+    "test:e2e:camera": "node scripts/test_camera_e2e.mjs",
+    "test:tv-smoke": "node scripts/run_tv_smoke.mjs",
+    "bench:latency": "node scripts/run_lab_command.mjs latency",
+    "eval:motion": "node scripts/run_lab_command.mjs motion",
+    "eval:voice": "node scripts/run_lab_command.mjs voice",
+    "test:lab": "python -m pytest scripts/test_eval_motion.py scripts/test_align_recording.py scripts/test_eval_voice.py scripts/test_camera_fixture.py -q -p no:cacheprovider --basetemp=.cache/pytest-lab",
+    "build:tv-web": "node scripts/build_tv_web.mjs",
+    "test:tv-web": "node scripts/test_tv_web.mjs",
+    "setup:voice": "python scripts/setup_voice.py",
+    "test:controller": "node scripts/test_controller.mjs"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "0.10.32",
+    "qrcode": "1.5.4",
+    "vosk-browser": "0.0.8",
+    "ws": "8.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.19.43",
+    "@types/qrcode": "1.5.6",
+    "@types/ws": "8.18.2",
+    "esbuild": "0.28.2",
+    "playwright": "1.63.0",
+    "tsx": "4.23.15",
+    "typescript": "5.7.3"
+  }
+}

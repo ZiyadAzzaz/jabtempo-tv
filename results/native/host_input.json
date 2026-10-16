@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "source": "Windows SendInput to foreground-verified owned emulator window",
+  "window": "Android Emulator - JabTempo_TV_1080p:5580",
+  "pid": 29268,
+  "executable": "D:\\android-fire-TV\\sdk\\emulator\\qemu\\windows-x86_64\\qemu-system-x86_64.exe",
+  "physicalPhoneVerified": false,
+  "before": "Play",
+  "afterRight": "Family Challenge",
+  "rightArrow": true,
+  "enterSelect": true
+}

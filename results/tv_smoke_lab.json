@@ -1,0 +1,89 @@
+{
+  "v": 1,
+  "status": "PASS",
+  "setup": "Android TV emulator + synthetic protocol phone",
+  "gatePass": false,
+  "checks": [
+    {
+      "screen": "Home",
+      "title": "Your moves. Your rhythm.",
+      "found": true,
+      "screenshot": "Home.png"
+    },
+    {
+      "screen": "Family",
+      "title": "A little friendly competition.",
+      "found": true,
+      "screenshot": "Family.png"
+    },
+    {
+      "screen": "Pair",
+      "title": "Bring your camera.",
+      "found": true,
+      "screenshot": "Pair.png"
+    },
+    {
+      "screen": "HowToPlay",
+      "title": "Learn left and right.",
+      "found": true,
+      "screenshot": "HowToPlay.png"
+    },
+    {
+      "screen": "Calibrate",
+      "title": "Find your timing.",
+      "found": true,
+      "screenshot": "Calibrate.png"
+    },
+    {
+      "screen": "Summary",
+      "title": "Your next best round.",
+      "found": true,
+      "screenshot": "Summary.png"
+    },
+    {
+      "screen": "Daily",
+      "title": "A little rhythm. Every day.",
+      "found": true,
+      "screenshot": "Daily.png"
+    },
+    {
+      "screen": "Settings",
+      "title": "Your pace. Your space.",
+      "found": true,
+      "screenshot": "Settings.png"
+    }
+  ],
+  "visualReview": "PENDING",
+  "relay": {
+    "mode": "existing trusted HTTPS/WSS relay",
+    "certificateVerification": true,
+    "ownedByRunner": false
+  },
+  "tutorial": {
+    "wrongHandWaits": true,
+    "leftThenRight": true,
+    "source": "Synthetic protocol events; no physical hand accuracy claim"
+  },
+  "calibration": {
+    "left": 4,
+    "right": 4,
+    "actualNativeAudioClock": true,
+    "syntheticInputs": true,
+    "alternatingProtocolInputs": true
+  },
+  "simulatedPlay": {
+    "source": "generated progressive chart",
+    "controller": "synthetic protocol events; no real camera or person",
+    "scheduledNotes": 57,
+    "eventsSent": 102,
+    "deliberateSkippedNotes": 6,
+    "naturalRoundFinish": true
+  },
+  "demoCapture": {
+    "path": "local_private/demo/native_simulated_player_raw.mp4",
+    "kind": "synthetic controller / real native emulator video",
+    "audio": false,
+    "submissionReady": false
+  },
+  "note": "Native emulator with synthetic pose/punch events; naturally finished round and scoped crash scan. No physical camera/person accuracy or latency claim."
+}

@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-16",
+  "status": "PASS",
+  "platform": "installed JabTempo TV Android TV emulator app",
+  "controller": "synthetic protocol pose and punch events",
+  "physicalPersonOrPhoneCamera": false,
+  "naturalRoundFinish": true,
+  "scheduledNotes": 57,
+  "syntheticEventsSent": 102,
+  "deliberatelySkippedNotes": 6,
+  "observedNativeSummaryScore": 5880,
+  "observedNativeSummaryBeatMatchPercent": 86,
+  "metricsAreSyntheticAndNotPlayerAccuracy": true,
+  "nativeSmokeReport": "results/ui_smoke/report.json",
+  "editedVideo": "local_private/demo/JabTempo_simulated_emulator_demo.mp4",
+  "videoDurationSeconds": 90.304,
+  "videoSha256": "e03546a8349e23132e42f611859c1a8dad78afdc80b8f6eb1906ae479e198abd",
+  "videoLabel": "ANDROID TV EMULATOR - SYNTHETIC CONTROLLER",
+  "music": "original JabTempo generated beat, added during editing",
+  "publiclyUploaded": false,
+  "humanCameraAccuracyVerified": false
+}

@@ -1,0 +1,337 @@
+{
+  "startedUtc": "2026-10-16T16:55:57.575Z",
+  "setup": "TV web preview / synthetic protocol phone",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "url": "http://127.0.0.1:52344/tv-web/",
+  "nativeVerified": false,
+  "sensorAccuracyVerified": false,
+  "latencyGatePass": false,
+  "status": "PASS",
+  "screens": [
+    {
+      "screen": "Home",
+      "label": "TV web preview",
+      "screenshot": "E:\\Azzaz CAI\\Azzaz-Lab\\Amazon-fireTV\\results\\tv-web\\Home.png",
+      "focus": {
+        "label": "Play",
+        "clipped": false,
+        "border": "rgb(243, 246, 252)",
+        "borderWidth": 4,
+        "outlineWidth": 1,
+        "background": "rgb(88, 185, 250)",
+        "left": 96,
+        "top": 682,
+        "right": 206.9375,
+        "bottom": 762,
+        "width": 110.9375,
+        "height": 80
+      },
+      "clippedText": []
+    },
+    {
+      "screen": "Settings",
+      "label": "TV web preview",
+      "screenshot": "E:\\Azzaz CAI\\Azzaz-Lab\\Amazon-fireTV\\results\\tv-web\\Settings.png",
+      "focus": {
+        "label": "Preset: Beginner",
+        "clipped": false,
+        "border": "rgb(243, 246, 252)",
+        "borderWidth": 4,
+        "outlineWidth": 1,
+        "background": "rgb(88, 185, 250)",
+        "left": 129,
+        "top": 395,
+        "right": 402.625,
+        "bottom": 475,
+        "width": 273.625,
+        "height": 80
+      },
+      "clippedText": []
+    },
+    {
+      "screen": "HowToPlay",
+      "label": "TV web preview",
+      "screenshot": "E:\\Azzaz CAI\\Azzaz-Lab\\Amazon-fireTV\\results\\tv-web\\HowToPlay.png",
+      "focus": {
+        "label": "Hands look swapped - confirm fix",
+        "clipped": false,
+        "border": "rgb(243, 246, 252)",
+        "borderWidth": 4,
+        "outlineWidth": 1,
+        "background": "rgb(88, 185, 250)",
+        "left": 129,
+        "top": 681,
+        "right": 609.953125,
+        "bottom": 761,
+        "width": 480.953125,
+        "height": 80
+      },
+      "clippedText": []
+    },
+    {
+      "screen": "Daily",
+      "label": "TV web preview",
+      "screenshot": "E:\\Azzaz CAI\\Azzaz-Lab\\Amazon-fireTV\\results\\tv-web\\Daily.png",
+      "focus": {
+        "label": "Play daily challenge",
+        "clipped": false,
+        "border": "rgb(243, 246, 252)",
+        "borderWidth": 4,
+        "outlineWidth": 1,
+        "background": "rgb(88, 185, 250)",
+        "left": 129,
+        "top": 513,
+        "right": 437.40625,
+        "bottom": 593,
+        "width": 308.40625,
+        "height": 80
+      },
+      "clippedText": []
+    },
+    {
+      "screen": "Family",
+      "label": "TV web preview",
+      "screenshot": "E:\\Azzaz CAI\\Azzaz-Lab\\Amazon-fireTV\\results\\tv-web\\Family.png",
+      "focus": {
+        "label": "Player 1: Alex",
+        "clipped": false,
+        "border": "rgb(243, 246, 252)",
+        "borderWidth": 4,
+        "outlineWidth": 1,
+        "background": "rgb(88, 185, 250)",
+        "left": 129,
+        "top": 555,
+        "right": 351.171875,
+        "bottom": 635,
+        "width": 222.171875,
+        "height": 80
+      },
+      "clippedText": []
+    },
+    {
+      "screen": "Pair",
+      "label": "TV web preview",
+      "screenshot": "E:\\Azzaz CAI\\Azzaz-Lab\\Amazon-fireTV\\results\\tv-web\\Pair.png",
+      "focus": {
+        "label": "Connect phone to continue",
+        "clipped": false,
+        "border": "rgb(243, 246, 252)",
+        "borderWidth": 4,
+        "outlineWidth": 1,
+        "background": "rgb(88, 185, 250)",
+        "left": 96,
+        "top": 732,
+        "right": 509.203125,
+        "bottom": 812,
+        "width": 413.203125,
+        "height": 80
+      },
+      "clippedText": []
+    },
+    {
+      "screen": "Calibrate",
+      "label": "TV web preview",
+      "screenshot": "E:\\Azzaz CAI\\Azzaz-Lab\\Amazon-fireTV\\results\\tv-web\\Calibrate.png",
+      "focus": {
+        "label": "Start calibration",
+        "clipped": false,
+        "border": "rgb(243, 246, 252)",
+        "borderWidth": 4,
+        "outlineWidth": 1,
+        "background": "rgb(88, 185, 250)",
+        "left": 96,
+        "top": 723,
+        "right": 361.59375,
+        "bottom": 803,
+        "width": 265.59375,
+        "height": 80
+      },
+      "clippedText": []
+    },
+    {
+      "screen": "Round",
+      "label": "TV web preview",
+      "screenshot": "E:\\Azzaz CAI\\Azzaz-Lab\\Amazon-fireTV\\results\\tv-web\\Round.png",
+      "focus": {
+        "label": "Pause",
+        "clipped": false,
+        "border": "rgb(243, 246, 252)",
+        "borderWidth": 4,
+        "outlineWidth": 1,
+        "background": "rgb(88, 185, 250)",
+        "left": 96,
+        "top": 766,
+        "right": 233.515625,
+        "bottom": 846,
+        "width": 137.515625,
+        "height": 80
+      },
+      "clippedText": []
+    },
+    {
+      "screen": "Summary",
+      "label": "TV web preview",
+      "screenshot": "E:\\Azzaz CAI\\Azzaz-Lab\\Amazon-fireTV\\results\\tv-web\\Summary.png",
+      "focus": {
+        "label": "Next round",
+        "clipped": false,
+        "border": "rgb(243, 246, 252)",
+        "borderWidth": 4,
+        "outlineWidth": 1,
+        "background": "rgb(88, 185, 250)",
+        "left": 96,
+        "top": 783,
+        "right": 296.6875,
+        "bottom": 863,
+        "width": 200.6875,
+        "height": 80
+      },
+      "clippedText": []
+    }
+  ],
+  "keyboardActions": [
+    "Backspace",
+    "ArrowRight",
+    "ArrowRight",
+    "ArrowRight",
+    "Enter",
+    "Enter",
+    "Enter",
+    "Enter",
+    "Enter",
+    "ArrowRight",
+    "Enter",
+    "Enter",
+    "Enter",
+    "Backspace",
+    "ArrowDown",
+    "Enter",
+    "Backspace",
+    "ArrowRight",
+    "ArrowRight",
+    "Enter",
+    "Backspace",
+    "ArrowRight",
+    "Enter",
+    "Backspace",
+    "Enter",
+    "Enter",
+    "ArrowDown",
+    "ArrowRight",
+    "Enter",
+    "Enter",
+    "ArrowRight",
+    "Enter",
+    "Backspace",
+    "Enter",
+    "Enter",
+    "ArrowRight",
+    "Enter",
+    "ArrowRight",
+    "Enter",
+    "ArrowRight",
+    "Enter",
+    "ArrowRight",
+    "ArrowRight",
+    "ArrowRight",
+    "Enter",
+    "ArrowRight",
+    "Enter",
+    "Backspace",
+    "ArrowRight",
+    "Enter",
+    "Enter",
+    "ArrowRight",
+    "ArrowRight",
+    "Enter",
+    "Enter",
+    "ArrowRight",
+    "Enter",
+    "ArrowRight",
+    "ArrowRight",
+    "ArrowRight",
+    "Enter",
+    "Enter",
+    "ArrowRight",
+    "ArrowRight",
+    "ArrowRight",
+    "Enter",
+    "ArrowRight",
+    "Enter"
+  ],
+  "errors": [],
+  "sessionSetup": {
+    "allFourPresetsSelectable": true,
+    "oneThreeFiveMinutesSelectable": true,
+    "defaultRoundMinutes": 1
+  },
+  "recovery": {
+    "backPauses": true,
+    "trackingLossPauses": true,
+    "countdownSeconds": 3,
+    "scoreAndClockFrozen": true
+  },
+  "liveTempo": {
+    "before": 110,
+    "after": 130,
+    "rate": 1.1818181818181819,
+    "positionPreserved": true
+  },
+  "noteContinuity": {
+    "beforeMiss": {
+      "time": 21082.303030303,
+      "judgments": 11,
+      "noteCount": 1,
+      "split": true,
+      "horizontalHitLine": true,
+      "correctSides": true
+    },
+    "afterMiss": {
+      "time": 29082.303030302446,
+      "judgments": 19,
+      "noteCount": 2,
+      "split": true,
+      "horizontalHitLine": true,
+      "correctSides": true
+    },
+    "lateRound": {
+      "time": 51082.30303029927,
+      "judgments": 46,
+      "noteCount": 2,
+      "split": true,
+      "horizontalHitLine": true,
+      "correctSides": true
+    },
+    "fullyVisible": true,
+    "futureFrameInjected": true
+  },
+  "syntheticPhone": {
+    "frames": 1231,
+    "events": 60
+  },
+  "round": {
+    "songTime": 61522.30303029762,
+    "score": 12120,
+    "combo": 40,
+    "judgmentsCount": 57,
+    "calibrationCount": 8,
+    "offset": -0.125,
+    "activeMs": 59877.78088578088,
+    "detectedPunches": 52,
+    "roundDurationMs": 60000
+  },
+  "family": {
+    "names": [
+      "Noor",
+      "Sam"
+    ],
+    "turns": 2,
+    "sameChart": true,
+    "roundMinutes": 3,
+    "earlyEndedRegression": true
+  },
+  "finishedUtc": "2026-10-16T16:57:32.922Z"
+}

@@ -1,0 +1,15 @@
+name: amazon-tv
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - nodejs=20
+  - openjdk=17
+  - pip
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - pytest
+  - ffmpeg=9.0.2=lgpl*

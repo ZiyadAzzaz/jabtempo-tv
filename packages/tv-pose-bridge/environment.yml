@@ -1,0 +1,5 @@
+name: amazon-tv
+channels:
+  - conda-forge
+dependencies:
+  - nodejs=20

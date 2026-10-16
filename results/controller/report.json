@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "setup": "local desktop browser engines / simulated viewports / synthetic files",
+  "physicalDevicesVerified": false,
+  "humanVoiceAccuracyVerified": false,
+  "layouts": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 390,
+      "height": 844,
+      "status": "PASS",
+      "cameraStarted": false
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 360,
+      "height": 800,
+      "status": "PASS",
+      "cameraStarted": false
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 768,
+      "height": 1024,
+      "status": "PASS",
+      "cameraStarted": false
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 1024,
+      "height": 768,
+      "status": "PASS",
+      "cameraStarted": false
+    },
+    {
+      "engine": "webkit",
+      "version": "26.6",
+      "width": 390,
+      "height": 844,
+      "status": "PASS",
+      "cameraStarted": false
+    },
+    {
+      "engine": "webkit",
+      "version": "26.6",
+      "width": 768,
+      "height": 1024,
+      "status": "PASS",
+      "cameraStarted": false
+    }
+  ],
+  "voice": {
+    "status": "PASS",
+    "engine": "Vosk WASM restricted grammar",
+    "fixture": "installed Windows TTS pause / quiet",
+    "synthetic": true,
+    "command": "pause",
+    "confidence": 1,
+    "actualRecognitionExecuted": true,
+    "iPhoneVerified": false
+  },
+  "errors": [],
+  "webkitOfflineModel": {
+    "status": "PASS",
+    "engine": "desktop WebKit",
+    "microphoneStarted": false,
+    "physicalSafariVerified": false
+  }
+}

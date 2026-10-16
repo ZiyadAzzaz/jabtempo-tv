@@ -1,0 +1,39 @@
+name: foundation-tests
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: amazon-tv
+          environment-file: environment.yml
+          auto-activate-base: false
+      - name: Verify environment and test
+        shell: pwsh
+        run: |
+          conda activate amazon-tv
+          if ($env:CONDA_DEFAULT_ENV -ne 'amazon-tv') { throw 'Incorrect environment' }
+          npm ci --ignore-scripts
+          if ($LASTEXITCODE -ne 0) { throw 'npm ci failed' }
+          foreach ($task in @('test', 'test:lab', 'typecheck', 'test:integration')) {
+            npm run $task
+            if ($LASTEXITCODE -ne 0) { throw "$task failed" }
+          }
+      - name: File-backed camera regression (synthetic negative only)
+        shell: pwsh
+        run: |
+          conda activate amazon-tv
+          $env:PLAYWRIGHT_BROWSERS_PATH = Join-Path $env:CONDA_PREFIX 'playwright-browsers'
+          npx playwright install chromium --no-shell
+          if ($LASTEXITCODE -ne 0) { throw 'Chromium install failed' }
+          npm run setup:assets
+          if ($LASTEXITCODE -ne 0) { throw 'Local assets setup failed' }
+          npm run test:e2e:camera
+          if ($LASTEXITCODE -ne 0) { throw 'Fake-camera regression failed' }

@@ -1,0 +1,12 @@
+<section class="card" aria-labelledby="selftest-heading">
+  <h2 id="selftest-heading">Try it for two minutes</h2>
+  <p>Play a round using your real punches, then replay your keypoints. We save no video or audio. This session is for tuning on you as a training person; it will never establish held-out accuracy. Keep the ID <code>m1-training-person</code> for your later recordings so you remain excluded from evaluation.</p>
+  <label class="consent"><input type="checkbox" id="selftest-consent"> I consent to recording my own keypoints locally for this two-minute training self-test. Everyone in view has agreed.</label>
+  <div class="actions"><button id="selftest-start">Record my two-minute self-test</button><button id="selftest-stop" class="secondary">Stop & replay</button><button id="selftest-label-jab" class="secondary">I punched a jab</button><button id="selftest-label-cross" class="secondary">I punched a cross</button></div>
+  <p id="selftest-status" role="status">Start your camera above when you are ready. No recording begins automatically.</p>
+  <p>Tap observations are independent of detector results, but include your reaction delay. For clearer timing, stop and scrub your replay, then mark the movement you observed. Timeline: blue = detector; orange = your independent observations. Circle = jab; bar = cross. No accuracy score is calculated.</p>
+  <canvas id="selftest-replay" width="960" height="540" aria-label="Recorded keypoint skeleton and detector versus observed punch timeline"></canvas>
+  <label>Replay position <input id="selftest-time" type="range" min="0" max="0" step="20" value="0"></label>
+  <p id="selftest-position" role="status">No training capture yet.</p>
+  <div class="actions"><button id="selftest-play" class="secondary">Play / pause replay</button><button id="selftest-review-jab" class="secondary">Mark observed jab here</button><button id="selftest-review-cross" class="secondary">Mark observed cross here</button><button id="selftest-save">Download training keypoints</button></div>
+</section>

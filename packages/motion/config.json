@@ -1,0 +1,16 @@
+{
+  "status": "provisional_not_fitted",
+  "trainingParticipants": 0,
+  "visibility": 0.5,
+  "minCutoff": 1,
+  "beta": 0.007,
+  "derivativeCutoff": 1,
+  "speedOn": 1.5,
+  "minExtension": 0.72,
+  "extensionRise": 0.08,
+  "peakFall": 0.015,
+  "guardRadius": 0.85,
+  "refractoryMs": 250,
+  "maxGapMs": 250,
+  "maxPunchMs": 1500
+}

@@ -1,0 +1,12 @@
+{
+  "name": "jabtempo-amazon-builder-tools",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Pinned official development tooling, separate from app runtime",
+  "devDependencies": {
+    "@amazon-devices/amazon-devices-buildertools-mcp": "1.0.13"
+  },
+  "dependencies": {
+    "jabtempo-tv": "file:../.."
+  }
+}

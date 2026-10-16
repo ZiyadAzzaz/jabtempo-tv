@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "executedUtc": "2026-10-03T00:17:57.731446+00:00",
+  "sourceCommit": "a2dce86ee2d0bdbf03b4fdda9985672213d3647e",
+  "serial": "emulator-5580",
+  "package": "com.anonymous.MultiTVSample",
+  "activity": ".MainActivity",
+  "install": "Success",
+  "launchStatus": "ok",
+  "launchTimeMs": 2467,
+  "screenshot": "results/native/Official-sample.png",
+  "visualReview": "Official sample home displayed with focused Home button and content cards; upstream sample narrow sidebar wraps labels at emulator density. Application source unchanged.",
+  "sampleG0": "PASS",
+  "nativeJabTempoRoundWithIPhone": false
+}

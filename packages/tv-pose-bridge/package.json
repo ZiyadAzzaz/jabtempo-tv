@@ -1,0 +1,12 @@
+{
+  "name": "tv-pose-bridge",
+  "version": "0.1.0",
+  "description": "Transport-independent local phone-to-TV pose event protocol and clock synchronization",
+  "license": "MIT",
+  "type": "module",
+  "exports": { ".": "./src/index.js", "./relay": "./src/relay.js", "./client": "./src/client.js" },
+  "files": ["src", "examples", "README.md", "protocol.md", "LICENSE"],
+  "scripts": { "test": "node --test test/bridge.test.js test/relay.test.js", "relay": "node examples/relay.js", "example": "node examples/simulated.js" },
+  "dependencies": { "ws": "8.22.0" },
+  "engines": { "node": ">=20" }
+}

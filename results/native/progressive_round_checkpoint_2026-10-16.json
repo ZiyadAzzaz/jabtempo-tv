@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-16",
+  "build": 13,
+  "apkSha256": "83948edfd18f934e419d09481bf8ea7950af6f6f212b26f7903e50a1f7931a91",
+  "buildResult": "results/native/jabtempo_build_13.json",
+  "coreTests": "72/72 PASS",
+  "tvAppTypecheck": "PASS",
+  "browserRound": {
+    "status": "PASS",
+    "report": "results/tv-web/report.json",
+    "screenCount": 9,
+    "syntheticPhone": true
+  },
+  "nativeSmoke": {
+    "status": "PASS",
+    "report": "results/ui_smoke/report.json",
+    "emulator": "emulator-5580",
+    "syntheticPhone": true,
+    "noPunchSeconds": 24,
+    "observedScreenshots": [
+      "results/ui_smoke/Round-misses-12s.png",
+      "results/ui_smoke/Round-misses-24s.png",
+      "results/ui_smoke/Resume-countdown.png",
+      "results/ui_smoke/Round-resumed.png"
+    ],
+    "manualVisualReview": "Gloves visible at 46 and 33 seconds remaining; second image shows two separated right gloves. Countdown and resumed round visible."
+  },
+  "userDeviceLatencyVerified": false,
+  "userDeviceSoundVerified": false,
+  "userDeviceHeatVerified": false,
+  "emulatorReturnedHome": true,
+  "localServerLeftRunning": true
+}

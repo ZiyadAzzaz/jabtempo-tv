@@ -1,0 +1,22 @@
+{
+  "target": "jabtempo",
+  "attempt": 13,
+  "startedUtc": "2026-10-16T16:08:20.471827+00:00",
+  "finishedUtc": "2026-10-16T16:12:59.890078+00:00",
+  "exitCode": 0,
+  "log": "D:\\android-fire-TV\\tmp\\jabtempo-build-13.log",
+  "workspace": "D:\\android-fire-TV\\projects\\jabtempo",
+  "apkBuilt": true,
+  "emulatorRun": false,
+  "nativeRoundWithIPhone": false,
+  "g0": "PENDING",
+  "setupPatches": [
+    "Bundle debug for standalone execution",
+    "EXPO_NO_METRO_WORKSPACE_ROOT=1"
+  ],
+  "nativeArchitecture": "x86 emulator only",
+  "lowMemoryBuild": true,
+  "apk": "D:\\android-fire-TV\\projects\\jabtempo\\apps\\tv\\android\\app\\build\\outputs\\apk\\debug\\app-debug.apk",
+  "bytes": 133902205,
+  "sha256": "83948edfd18f934e419d09481bf8ea7950af6f6f212b26f7903e50a1f7931a91"
+}

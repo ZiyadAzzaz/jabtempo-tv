@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720" role="img" aria-labelledby="title desc">
+<title id="title">How to make one detected jab</title><desc id="desc">Three schematic illustrations: hands near chin with elbow bent; extend the lead arm comfortably while the elbow remains visible; bend it again to return to guard. The detector confirms the movement after the return begins.</desc>
+<rect width="1440" height="720" rx="28" fill="#0A1020"/>
+<g font-family="Arial,sans-serif" fill="#F3F6FC"><text x="48" y="64" font-size="36" font-weight="bold">ONE JAB = GUARD → EXTEND → RETURN</text><text x="48" y="108" font-size="25" fill="#A9BCD7">Use your lead hand: left for Orthodox, right for Southpaw. These are schematic drawings.</text></g>
+<g fill="#131D32" stroke="#32445F" stroke-width="2"><rect x="40" y="146" width="430" height="442" rx="22"/><rect x="505" y="146" width="430" height="442" rx="22"/><rect x="970" y="146" width="430" height="442" rx="22"/></g>
+<g font-family="Arial,sans-serif" font-size="29" font-weight="bold" fill="#58B9FA"><text x="68" y="192">1. START IN GUARD</text><text x="533" y="192">2. JAB ON THE BEAT</text><text x="998" y="192">3. RETURN TO GUARD</text></g>
+<g stroke="#A9BCD7" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none">
+<circle cx="230" cy="277" r="38"/><path d="M230 320V447M230 447L185 536M230 447L275 536M230 350L200 414L187 316"/>
+<circle cx="657" cy="277" r="38"/><path d="M657 320V447M657 447L612 536M657 447L702 536M657 350L627 414L614 316"/>
+<circle cx="1158" cy="277" r="38"/><path d="M1158 320V447M1158 447L1113 536M1158 447L1203 536M1158 350L1128 414L1115 316"/>
+</g>
+<g stroke="#58B9FA" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M245 350L297 405L276 304"/><path d="M672 350L757 329L857 304"/><path d="M1173 350L1225 405L1204 304"/></g>
+<g fill="#FFB36B"><circle cx="297" cy="405" r="10"/><circle cx="757" cy="329" r="10"/><circle cx="1225" cy="405" r="10"/></g>
+<g fill="#58B9FA"><circle cx="276" cy="304" r="16"/><circle cx="857" cy="304" r="16"/><circle cx="1204" cy="304" r="16"/></g>
+<g font-family="Arial,sans-serif" font-size="24" fill="#F3F6FC"><text x="68" y="566">Hands near chin. Elbow bent.</text><text x="533" y="566">Comfortable extension; no lockout.</text><text x="998" y="566">Bend elbow; bring hand back.</text><text x="48" y="638" fill="#FFB36B">Orange dot = elbow. Keep it visible to the camera throughout the movement.</text><text x="48" y="680">Angle your body slightly so the camera sees the bend and extension. Do not aim straight into the lens.</text></g>
+</svg>

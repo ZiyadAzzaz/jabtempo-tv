@@ -1,0 +1,12 @@
+{
+  "url": "https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip",
+  "sourceSha256": "30f26242c4eb449f948e42cb302dd7a686cb29a3423a8367f99ff41780942498",
+  "bytes": 41116554,
+  "sha256": "a8af1004b2c54941f11cace4bf1b6d8f48e61cc3ffa6d23562990f432a2f6c70",
+  "model": "vosk-model-small-en-us-0.15",
+  "license": "Apache-2.0",
+  "licenseEvidence": "https://alphacephei.com/vosk/models",
+  "runtime": "Optional local browser worker; no cloud recognition",
+  "iPhoneVerified": false,
+  "humanVoiceAccuracyVerified": false
+}

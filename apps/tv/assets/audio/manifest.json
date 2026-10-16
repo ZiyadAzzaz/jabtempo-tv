@@ -1,0 +1,100 @@
+{
+  "generator": "scripts/gen_beats.py",
+  "generatorVersion": 2,
+  "license": "CC0-1.0",
+  "provenance": "Original mathematical sine-wave synthesis; no recordings or third-party samples",
+  "assets": [
+    {
+      "file": "beat_90.wav",
+      "frames": 4608000,
+      "durationSeconds": 96.0,
+      "sampleRate": 48000,
+      "channels": 1,
+      "bitsPerSample": 16,
+      "peakPcm": 14712,
+      "sha256": "cad9f8239df238906281e48b5d5d18fbf483e874568e88180fa31509894ca289",
+      "bpm": 90,
+      "beats": 144,
+      "loop": true,
+      "firstBeatMs": 0
+    },
+    {
+      "file": "beat_110.wav",
+      "frames": 3770182,
+      "durationSeconds": 78.54545833333333,
+      "sampleRate": 48000,
+      "channels": 1,
+      "bitsPerSample": 16,
+      "peakPcm": 14712,
+      "sha256": "ea08220685ad1db8aa9137513ed80a70c04fa06c8a593f68c741fd7941c9dbdf",
+      "bpm": 110,
+      "beats": 144,
+      "loop": true,
+      "firstBeatMs": 0
+    },
+    {
+      "file": "beat_130.wav",
+      "frames": 3190154,
+      "durationSeconds": 66.46154166666666,
+      "sampleRate": 48000,
+      "channels": 1,
+      "bitsPerSample": 16,
+      "peakPcm": 14712,
+      "sha256": "a3cf59bb5270792c5ed589b6757e0be636f5ddbd7c35d014f51b6b0c236fda55",
+      "bpm": 130,
+      "beats": 144,
+      "loop": true,
+      "firstBeatMs": 0
+    },
+    {
+      "file": "hit_perfect.wav",
+      "frames": 5760,
+      "durationSeconds": 0.12,
+      "sampleRate": 48000,
+      "channels": 1,
+      "bitsPerSample": 16,
+      "peakPcm": 7289,
+      "sha256": "6978ae594e106920a110049adacfa8e3a6aa08f40a67e689fcce6df9b246d06c"
+    },
+    {
+      "file": "hit_good.wav",
+      "frames": 5760,
+      "durationSeconds": 0.12,
+      "sampleRate": 48000,
+      "channels": 1,
+      "bitsPerSample": 16,
+      "peakPcm": 7264,
+      "sha256": "5c39ea98f636a9c1ed02846ebca298a7d06023f9328f5766bc1b291258d35cc2"
+    },
+    {
+      "file": "hit_guard.wav",
+      "frames": 5760,
+      "durationSeconds": 0.12,
+      "sampleRate": 48000,
+      "channels": 1,
+      "bitsPerSample": 16,
+      "peakPcm": 7284,
+      "sha256": "8d7467829eb2e2e59f88264fdde1fe07c0a4f817f8de117f90fc03c9c939e1c8"
+    },
+    {
+      "file": "hit_miss.wav",
+      "frames": 5760,
+      "durationSeconds": 0.12,
+      "sampleRate": 48000,
+      "channels": 1,
+      "bitsPerSample": 16,
+      "peakPcm": 7062,
+      "sha256": "5446416c38db5e206809655066aef1d7eebd2b80bd66b286fb2f9e30fd123c0a"
+    },
+    {
+      "file": "hit_combo.wav",
+      "frames": 5760,
+      "durationSeconds": 0.12,
+      "sampleRate": 48000,
+      "channels": 1,
+      "bitsPerSample": 16,
+      "peakPcm": 7255,
+      "sha256": "99f3ae07b9a2790ebcdce8d800a09651e75b908155b8e6390902df2401220f29"
+    }
+  ]
+}

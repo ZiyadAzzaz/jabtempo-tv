@@ -1,0 +1,16 @@
+<!-- Insert this fragment into the local camera page. Camera code calls installRecordingUI hooks. -->
+<section class="card" aria-labelledby="lab-record-heading">
+  <h2 id="lab-record-heading">Guided recording lab</h2>
+  <p>Two separate 10-minute sessions per person. Session 2 uses different clothes, light or distance. A seeded script gives instructions; it does not establish what you actually did. Independent review confirms all peaks before evaluation.</p>
+  <label>Anonymous participant <input id="lab-participant" placeholder="p01" pattern="[a-zA-Z0-9_-]{1,64}"></label>
+  <label>Session <select id="lab-session"><option value="1">1 — first conditions</option><option value="2">2 — changed conditions</option></select></label>
+  <label>Script seed <input id="lab-seed" type="number" value="20261005" min="0" max="4294967295"></label>
+  <label class="consent"><input id="lab-eval-consent" type="checkbox"> I agree to keypoint recording, evaluation and aggregate reporting.</label>
+  <label class="consent"><input id="lab-git-consent" type="checkbox"> I separately agree to publishing anonymous keypoint JSONL in the project repository. Optional.</label>
+  <label class="consent"><input id="lab-video-consent" type="checkbox"> I agree to video staying local for testing/review and being deleted after the hackathon. Optional.</label>
+  <label class="consent"><input id="lab-demo-consent" type="checkbox"> I separately agree to appearing in a published demo video. Optional.</label>
+  <label class="consent"><input id="lab-record-video" type="checkbox"> Record local video now. No audio is recorded. Optional; requires local-video consent above.</label>
+  <p>Choose browser Save As when available, or move video downloads into this repository's ignored <code>local_private/</code> folder. Downloading is local only. Never upload raw footage; demo permission is separate and does not publish anything automatically.</p>
+  <div class="actions"><button id="lab-record-start">Start 10-minute recording</button><button id="lab-record-stop" class="secondary">Stop recording</button><button id="lab-record-save" class="secondary">Download local files</button></div>
+  <p id="lab-record-prompt" role="status">Not recording.</p><p id="lab-record-status" role="status">No dataset recorded. Voice prompts here are a collection aid, not a complete voice accuracy evaluation.</p>
+</section>

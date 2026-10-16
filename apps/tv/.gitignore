@@ -1,0 +1,6 @@
+node_modules/
+android/
+.expo/
+.yarn/install-state.gz
+.yarn/cache/
+dist/

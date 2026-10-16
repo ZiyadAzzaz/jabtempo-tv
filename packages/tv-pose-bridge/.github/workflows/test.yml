@@ -1,0 +1,26 @@
+name: Bridge tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: amazon-tv
+          environment-file: environment.yml
+          auto-activate-base: false
+      - name: Install and test
+        shell: pwsh
+        run: |
+          conda activate amazon-tv
+          if ($env:CONDA_DEFAULT_ENV -ne 'amazon-tv') { throw 'Incorrect environment' }
+          npm ci --ignore-scripts
+          if ($LASTEXITCODE -ne 0) { throw 'npm ci failed' }
+          npm test
+          if ($LASTEXITCODE -ne 0) { throw 'Tests failed' }
+          npm run example
+          if ($LASTEXITCODE -ne 0) { throw 'Example failed' }

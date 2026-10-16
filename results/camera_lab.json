@@ -1,0 +1,35 @@
+{
+  "v": 1,
+  "status": "PASS",
+  "measuredSetup": "dev-cam",
+  "fixtureKind": "synthetic-empty-scene-negative",
+  "fixtureSha256": "517797860a262f195472ea4619f0a8b62eaf718f06c1db4215a8980150914d5d",
+  "synthetic": true,
+  "gatePass": false,
+  "phonePerformance": false,
+  "delegate": "CPU/WASM",
+  "counts": {
+    "quality": 4,
+    "pong": 1
+  },
+  "notes": [
+    "Negative fixture exercised actual capture, model inference, tracking-loss output, protocol and TV receiver. Human punch/guard video regression is pending consented clips.",
+    "Pixel 5 viewport emulation does not emulate phone CPU, sensors or thermal limits."
+  ],
+  "browserErrors": [],
+  "browserVersion": "153.0.8010.12",
+  "lastQuality": {
+    "framing": 0,
+    "issues": [
+      "tracking lost"
+    ]
+  },
+  "tracks": [
+    {
+      "kind": "video",
+      "fileBacked": true
+    }
+  ],
+  "inferenceDisplay": "",
+  "blockedExternalRequests": 0
+}

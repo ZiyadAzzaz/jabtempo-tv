@@ -1,0 +1,134 @@
+{
+  "recordedAtUtc": "2026-10-02T13:16:06.401693+00:00",
+  "clientDateCairo": "2026-10-02",
+  "setup": "Windows; conda amazon-tv; local source/dependency/prebuild/Metro checks; no Android SDK build",
+  "packageManager": "Yarn 4.5.0",
+  "dependencyInstall": {
+    "passed": true,
+    "immutableInstallPassed": true,
+    "resolvedLockfile": "yarn.lock"
+  },
+  "typecheck": {
+    "passed": true,
+    "command": "yarn typecheck",
+    "dependencies": "standalone apps/tv/node_modules"
+  },
+  "androidPrebuild": {
+    "passed": true,
+    "command": "EXPO_TV=1 yarn expo prebuild --platform android --no-install",
+    "targetSdk": 34,
+    "compileSdk": 36
+  },
+  "generatedManifest": {
+    "leanbackRequired": true,
+    "touchscreenRequired": false,
+    "activePermissions": [
+      "android.permission.INTERNET"
+    ],
+    "blockedWithMergeRemoval": [
+      "CAMERA",
+      "RECORD_AUDIO",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "SYSTEM_ALERT_WINDOW",
+      "VIBRATE"
+    ],
+    "mergedApkPermissionsVerified": false
+  },
+  "androidExport": {
+    "passed": true,
+    "command": "EXPO_TV=1 yarn expo export --platform android --output-dir dist --max-workers 2",
+    "modules": 607,
+    "format": "Hermes bytecode",
+    "path": "dist/_expo/static/js/android/index-d8a4418b132c633a286eea59583e64dd.hbc",
+    "bytes": 1829309,
+    "sha256": "490649049c0eacae3fb6235a741e066f9ab0b4470d6455685eb89d7b51cd4618",
+    "assets": [
+      "beat_90.wav",
+      "beat_110.wav",
+      "beat_130.wav"
+    ]
+  },
+  "apkBuilt": false,
+  "emulatorRun": false,
+  "deviceAudioVerified": false,
+  "devicePerformanceVerified": false,
+  "g0Passed": false,
+  "g1Passed": false,
+  "warnings": [
+    "Expo 54 vs config-tv 0.0.10 Expo51 peer range",
+    "Optional Yarn TypeScript compatibility patch hunk warning"
+  ],
+  "fixes": [
+    "Disabled obsolete Flipper removal: generated Expo54 sources contain no Flipper",
+    "Removed temporary tsconfig declaration aliases because Expo applies them at runtime",
+    "Used approved sandbox escalation for Metro worker spawn EPERM"
+  ],
+  "costUsd": 0,
+  "prompt3SharedRuntime": {
+    "recordedAtUtc": "2026-10-02T17:55:48.882250+00:00",
+    "scope": "Prompt3 shared native/web product runtime; packaging verification only; no APK/emulator or physical sensor evidence",
+    "typecheckPassed": true,
+    "web": {
+      "passed": true,
+      "command": "yarn expo export --platform web --max-workers 2 --output-dir ../../.cache/tv-web",
+      "modules": 290,
+      "format": "JavaScript",
+      "path": ".cache/tv-web/_expo/static/js/web/index-ffd17fc87424101087eec3d74c922df3.js",
+      "bytes": 542768,
+      "sha256": "294e09777b7ae4a9c3a70e1b14192bc88f4b16676cb5a05863799a4e610bcb52",
+      "assets": [
+        "assets/assets/audio/beat_110.0e7c41ee6b6316a1b27b5f6fe6507421.wav",
+        "assets/assets/audio/beat_130.45c5003f2743975c50275ab98b3cd73e.wav",
+        "assets/assets/audio/beat_90.b321d62185c788de80f0c233f7bac432.wav",
+        "assets/assets/audio/hit_combo.e1897047d8feebe38366b8b33d3884b6.wav",
+        "assets/assets/audio/hit_good.e70f4be1aed6c7191717e6520b0151c0.wav",
+        "assets/assets/audio/hit_guard.ba85e00b8e221663826fba483ab2db54.wav",
+        "assets/assets/audio/hit_miss.9bc2fc541972e1a1ed540badbd0e0e8e.wav",
+        "assets/assets/audio/hit_perfect.2dfa750bd5237d8f1d86b8280553b0b9.wav",
+        "assets/assets/fonts/BarlowCondensed-Bold.f599739e94768bec57f6899c422a5119.ttf",
+        "assets/assets/fonts/Manrope[wght].946beb949095146693eb61281f15d355.ttf"
+      ],
+      "assetCount": 10
+    },
+    "native": {
+      "passed": true,
+      "command": "yarn expo export --platform android --max-workers 2 --output-dir ../../.cache/tv-native-export",
+      "modules": 769,
+      "format": "Hermes bytecode",
+      "path": ".cache/tv-native-export/_expo/static/js/android/index-57e68910ee5384ae663c4e2c2fa56f22.hbc",
+      "bytes": 2134737,
+      "sha256": "de575ac2f9cc35411ce00acff4b8247bb3f80607cf6cb546ca28819c38933ca8",
+      "assets": [
+        "assets/0e7c41ee6b6316a1b27b5f6fe6507421",
+        "assets/2dfa750bd5237d8f1d86b8280553b0b9",
+        "assets/45c5003f2743975c50275ab98b3cd73e",
+        "assets/946beb949095146693eb61281f15d355",
+        "assets/9bc2fc541972e1a1ed540badbd0e0e8e",
+        "assets/b321d62185c788de80f0c233f7bac432",
+        "assets/ba85e00b8e221663826fba483ab2db54",
+        "assets/e1897047d8feebe38366b8b33d3884b6",
+        "assets/e70f4be1aed6c7191717e6520b0151c0",
+        "assets/f599739e94768bec57f6899c422a5119"
+      ],
+      "assetCount": 10
+    },
+    "finalVisualCorrections": [
+      "Round290px stage with145px lanes leaves room for28px control labels",
+      "Centered note shapes on timing line",
+      "Summary per-screen scroll reset and compact coaching",
+      "HowToPlay equal shrinking cards"
+    ]
+  },
+  "iphoneConnectionUi": {
+    "checkedUtc": "2026-10-02T18:41:21.252923+00:00",
+    "scope": "Updated shared web pairing URL and iPhone instructions; no physical Safari/native run",
+    "webExportPassed": true,
+    "modules": 290,
+    "bytes": 542923,
+    "sha256": "89f408f841594cfe54d9d76cb962e5c5b7df6b1fe0cd4ae2727f18406a8e80cf",
+    "path": ".cache/tv-web/_expo/static/js/web/index-5e0049cf9bede13a86f6d019efadbb92.js",
+    "keyboardSmoke": "results/tv-web/report.json",
+    "nativeReexportedForThisChange": false
+  }
+}

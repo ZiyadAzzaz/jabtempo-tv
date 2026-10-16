@@ -1,0 +1,96 @@
+{
+  "v": 1,
+  "status": "PASS",
+  "setup": "Android TV emulator + synthetic protocol phone",
+  "gatePass": false,
+  "checks": [
+    {
+      "screen": "Home",
+      "title": "Your moves. Your rhythm.",
+      "found": true,
+      "screenshot": "Home.png"
+    },
+    {
+      "screen": "Family",
+      "title": "A little friendly competition.",
+      "found": true,
+      "screenshot": "Family.png"
+    },
+    {
+      "screen": "Pair",
+      "title": "Bring your camera.",
+      "found": true,
+      "screenshot": "Pair.png"
+    },
+    {
+      "screen": "HowToPlay",
+      "title": "Ready in twenty seconds.",
+      "found": true,
+      "screenshot": "HowToPlay.png"
+    },
+    {
+      "screen": "Calibrate",
+      "title": "Find your timing.",
+      "found": true,
+      "screenshot": "Calibrate.png"
+    },
+    {
+      "screen": "Round",
+      "title": "Meet the beat.",
+      "found": true,
+      "screenshot": "Round.png"
+    },
+    {
+      "screen": "Summary",
+      "title": "Your next best round.",
+      "found": true,
+      "screenshot": "Summary.png"
+    },
+    {
+      "screen": "Daily",
+      "title": "A little rhythm. Every day.",
+      "found": true,
+      "screenshot": "Daily.png"
+    },
+    {
+      "screen": "Settings",
+      "title": "Your pace. Your space.",
+      "found": true,
+      "screenshot": "Settings.png"
+    }
+  ],
+  "visualReview": "PASS: all nine actual emulator screenshots reviewed; text/buttons within safe area, note clipping at lane entry intentional",
+  "relay": {
+    "mode": "existing trusted HTTPS/WSS relay",
+    "certificateVerification": true,
+    "ownedByRunner": false
+  },
+  "tutorial": {
+    "wrongHandWaits": true,
+    "leftThenRight": true,
+    "source": "Synthetic protocol events; no physical hand accuracy claim"
+  },
+  "calibration": {
+    "left": 4,
+    "right": 4,
+    "actualNativeAudioClock": true,
+    "syntheticInputs": true,
+    "alternatingProtocolInputs": true
+  },
+  "recovery": {
+    "backPauses": true,
+    "resumeReturnsToRound": true,
+    "countdownScreenshot": "Resume-countdown.png",
+    "resumedScreenshot": "Round-resumed.png",
+    "countdownVisualReview": "PASS: countdown3 with58trackseconds, resumedPausebutton with57trackseconds"
+  },
+  "reason": null,
+  "runtimeScan": {
+    "pid": "9565",
+    "scopedAppLog": "PASS",
+    "processAlive": true,
+    "executedUtc": "2026-10-03T00:43:23.334365+00:00",
+    "timestampFormatFailureResolvedBy": "Full fresh-process PID-scoped log retrieval, executed after same run; no UI assertions re-created"
+  },
+  "note": "Nine native screens and D-pad checks, synthetic 4-left/4-right calibration, pause/resume. Round deliberately ended early. Physical phone, audible sound/speech and performance gates remain pending."
+}

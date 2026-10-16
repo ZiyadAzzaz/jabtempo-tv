@@ -31,6 +31,11 @@ used **synthetic controller events**. They verify software flow, not human punch
 accuracy, iPhone performance, or physical Fire TV hardware. The edited video
 is kept outside Git to avoid raw media in source control.
 
+The owner reports that they played the prototype and invited friends to play.
+They described those informal sessions as working well and impressive. This is
+owner-reported feedback, without a recorded participant count, device setup,
+scores, or measured accuracy; the linked demo remains a simulated-input run.
+
 ## Build and run on Windows
 
 Install free Conda, Android command-line SDK/emulator and an Android TV x86_64
